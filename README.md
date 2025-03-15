@@ -99,7 +99,7 @@ The project is organized into the following directories:
 ### Technologies Used
 - **Frontend**: Next.js, React
 - **Backend**: Node.js, MongoDB
-- **Styling**: CSS or any preferred styling library (not specified in the provided information)
+- **Styling**: Tailwind CSS and external components
 
 ---
 
