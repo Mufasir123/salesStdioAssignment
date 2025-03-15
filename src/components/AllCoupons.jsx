@@ -7,6 +7,7 @@ import {
 } from "@/components/ui/card";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 
 export default function AllCoupons({ className, ...props }) {
@@ -58,11 +59,11 @@ console.log("Ip address", isCookieAccepted, ip);
       
       if (response.status === 200) {
         localStorage.setItem("lastClaimTime", Date.now());
-        alert("🎉 Coupon claimed successfully!");
+        toast.success("🎉 Coupon claimed successfully!");
       }
     } catch (error) {
       if (error.response?.status === 429) {
-        alert(
+        toast.error(
           error.response?.data?.error || "You can claim a coupon later."
         );
 

@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 export default function CookieConsent({ onAccept }) {
   const [showPopup, setShowPopup] = useState(false);
@@ -25,6 +26,7 @@ export default function CookieConsent({ onAccept }) {
       }
     } catch (error) {
       console.error("Error storing IP:", error);
+      toast.error(error);
     }
   };
 

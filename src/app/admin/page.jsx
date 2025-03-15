@@ -45,7 +45,7 @@ export default function AdminDashboard() {
       toast.success("Coupon added successfully!");
       fetchCoupons();
     } catch (error) {
-      setMessage(error.response?.data?.error || "Something went wrong");
+      toast.error(error.response?.data?.error || "Something went wrong");
     }
     setFormData({ title: "", description: "", code: "", discount: "", expiryDate: "" });
   }

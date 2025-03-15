@@ -1,6 +1,7 @@
 'use client'
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import { toast } from 'react-toastify'
 
 const ClaimedCoupon = () => {
   const [coupons, setCoupons] = useState([])
@@ -19,12 +20,12 @@ const ClaimedCoupon = () => {
       setCoupons(response.data.claimedCoupons)
 
     } catch (error) {
-      alert(error.response?.data?.error || "Error fetching coupons")
+      toast.error(error.response?.data?.error || "Error fetching coupons")
     }finally{
       setLoading(false)
     }
   }
-  
+
   return (
     <div className='mt-20 ml-10'>
       <h2 className="text-lg font-semibold mt-6">Claimed Coupons</h2>

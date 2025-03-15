@@ -4,6 +4,7 @@ import { getCoupons } from "@/store/slices/couponsStoreSlice";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
+import { toast } from "react-toastify";
 
 export default function FeaturesSectionWithHoverEffects() {
 
@@ -37,7 +38,7 @@ export default function FeaturesSectionWithHoverEffects() {
 
   const handleAddClime = async (couponCode) => {
     if (!isCookieAccepted) {
-      alert("Please accept cookies first!");
+      toast.error("Please accept cookies first!");
       return;
     }
 
@@ -54,11 +55,11 @@ export default function FeaturesSectionWithHoverEffects() {
       
       if (response.status === 200) {
         localStorage.setItem("lastClaimTime", Date.now());
-        alert("🎉 Coupon claimed successfully!");
+        toast.success("🎉 Coupon claimed successfully!");
       }
     } catch (error) {
       if (error.response?.status === 429) {
-        alert(error.response?.data?.error || "You can claim a coupon later.");
+        toast.error(error.response?.data?.error || "You can claim a coupon later.");
       } else if (error.response?.status === 400) {
         setErrorMessage("Please accept cookies first!");
       } else {
