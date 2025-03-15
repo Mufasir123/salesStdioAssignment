@@ -55,7 +55,6 @@ console.log("Ip address", isCookieAccepted, ip);
           headers: { "Content-Type": "application/json" },
         }
       );
-      console.log("response: ",response);
       
       if (response.status === 200) {
         localStorage.setItem("lastClaimTime", Date.now());
