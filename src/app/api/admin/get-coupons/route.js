@@ -7,7 +7,7 @@ export async function GET() {
 
     try {
         await dbConnect();
-        const coupons = await Coupon.find()
+        const coupons = await Coupon.find().limit(50).lean();
         return NextResponse.json({coupons}, {status: 200})
     } catch (error) {
         console.error("Error getting coupons:", error);
