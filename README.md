@@ -23,4 +23,4 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 Lets start 
 First you need to install all dependieces if not installed in project
 
-![Screenshot Description](0 dependencies image.png)
+![Screenshot Description](https://github.com/Mufasir123/salesStdioAssignment/blob/main/0%20dependencies%20image.png?raw=true)
