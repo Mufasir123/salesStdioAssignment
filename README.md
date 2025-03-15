@@ -1,7 +1,7 @@
 # Sales Studio Assignment - Next.js Project
 LiveProjectLink:- (https://sales-stdio-assignment.vercel.app/)
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). It includes a user interface for claiming coupons and an admin panel for managing coupons. The project uses MongoDB for data storage and tracks users via their IP address and session ID.
+This is a [Next.js](https://nextjs.org/) project Tailwin Css with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). It includes a user interface for claiming coupons and an admin panel for managing coupons. The project uses MongoDB for data storage and tracks users via their IP address and session ID.
 
 ---
 
