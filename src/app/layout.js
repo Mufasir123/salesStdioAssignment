@@ -4,6 +4,7 @@ import dbConnect from "@/lib/dbConnect.js";
 import CookieConsent from "@/components/CookieConsent";
 import CustomProvider from "@/store/customProvider";
 import { NavBarDemo } from "@/components/Navbar";
+import { ToastContainer } from "react-toastify";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,6 +29,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <ToastContainer/>
         <NavBarDemo/>
         <CustomProvider>
 

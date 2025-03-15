@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 export default function AdminDashboard() {
   const [coupons, setCoupons] = useState([]);
@@ -41,7 +42,7 @@ export default function AdminDashboard() {
 
       console.log("response:", response.data.coupon);
       
-      alert("Coupon added successfully!");
+      toast.success("Coupon added successfully!");
       fetchCoupons();
     } catch (error) {
       setMessage(error.response?.data?.error || "Something went wrong");
@@ -63,7 +64,7 @@ export default function AdminDashboard() {
           <input type="number" name="discount" placeholder="Discount %" required className="p-2 border" onChange={handleChange} />
           <input type="date" name="expiryDate" required className="p-2 border" onChange={handleChange} />
         </div>
-        <button type="submit" className="bg-blue-500 text-white px-4 py-2 mt-2 rounded-md">Add Coupon</button>
+        <button type="submit" className="bg-blue-500 text-white px-4 py-2 mt-2 rounded-md cursor-pointer">Add Coupon</button>
       </form>
       {message && <p className="text-red-500">{message}</p>}
 
